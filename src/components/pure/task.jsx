@@ -2,11 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Task } from '../../models/task.class';
 
+import '../../styles/app.scss';
+import '../../styles/task.scss';
+
 
 const TaskComponent = ({ task }) => {
     return (
-        <div>
-            <h2>
+        <div className='task'>
+            <h2 className='task__name'>
                 Name: { task.name }
             </h2>
             <h3>
