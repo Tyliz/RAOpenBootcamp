@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+// Se añade los estilos de bootstrap
+import 'bootstrap/dist/css/bootstrap.css';
+// ! Importante: los estilos propios, deben ir despues de los estilos de bootstrap
 import './index.css';
+import './styles/app.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
