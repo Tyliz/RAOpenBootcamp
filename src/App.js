@@ -7,14 +7,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 
-// import Example2 from './hooks/Example2';
-// import MiComponenteConContexto from './hooks/Example3';
-// import Example4 from './hooks/Example4';
-// import { UsuarioComponent } from './components/pure/usuario';
-// import Greeting from './components/pure/greeting';
-// import Greetingf from './components/pure/greetingf';
-// import TaskListComponent from './components/container/task_list';
-import Father from './components/container/father';
+import OptionRender from './components/pure/optionRender';
 
 config.autoAddCss = false;
 library.add(fas, far);
@@ -28,11 +21,11 @@ function App() {
 			{/* <Greeting name="Tyliz"></Greeting> */}
 			{/* <Greetingf name="Tyliz"></Greetingf> */}
 			{/* <TaskListComponent></TaskListComponent> */}
-			<Father></Father>
 			{/* <Example2></Example2> */}
 			{/* <MiComponenteConContexto></MiComponenteConContexto> */}
 			{/* <UsuarioComponent></UsuarioComponent> */}
 			{/* </header> */}
+			<OptionRender></OptionRender>
 		</div>
 	);
 }

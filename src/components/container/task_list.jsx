@@ -1,41 +1,63 @@
-import React, { useState } from "react";
-import { LEVELS } from "../../models/levels.enum";
-import { Task } from "../../models/task.class";
-import TaskForm from "../pure/forms/taskForm";
-import TaskComponent from "../pure/task";
+import React, { useState } from 'react';
+import { LEVELS } from '../../models/levels.enum';
+import { Task } from '../../models/task.class';
+import TaskForm from '../pure/forms/taskForm';
+import TaskComponent from '../pure/task';
 
 const TaskListComponent = () => {
 	const defaultTask1 = new Task(
-		"Example 1",
-		"Default descripton 1",
+		1,
+		'Example 1',
+		'Default descripton 1',
 		true,
 		LEVELS.NORMAL
 	);
 
 	const defaultTask2 = new Task(
-		"Example 2",
-		"Default descripton 2",
+		2,
+		'Example 2',
+		'Default descripton 2',
 		false,
 		LEVELS.URGENT
 	);
 
 	const defaultTask3 = new Task(
-		"Example 3",
-		"Default descripton 3",
+		3,
+		'Example 3',
+		'Default descripton 3',
 		false,
 		LEVELS.BLOCKING
 	);
 
 	const [lstTask, setLstTask] = useState([defaultTask1, defaultTask2, defaultTask3]);
 
-	const changeState = (idTask) => {
-		console.log("TODO: to chage a state of a task");
+	const completeTask = (task) => {
+		const index = lstTask.indexOf(task);
+		const tmpLstTask = [...lstTask];
+
+		tmpLstTask[index].completed = !tmpLstTask[index].completed;
+
+		// We update the state of the componente and it will update the
+		// Iteration of tje tasks in order to show the task update
+		setLstTask(tmpLstTask);
+	};
+
+	const removeTask = (task) => {
+		const index = lstTask.indexOf(task);
+		const tmpLstTask = [...lstTask];
+		tmpLstTask.splice(index, 1);
+		setLstTask(tmpLstTask);
+	};
+
+	const addTask = (task) => {
+		const tmpLstTask = [...lstTask, task];
+		setLstTask(tmpLstTask);
 	};
 
 	return (
 		<div>
-			<div className="col-12">
-				<div className="card">
+			<div className='col-12'>
+				<div className='card'>
 					{/* Title */}
 					<div className='card-header p-3'>
 						<h5>
@@ -55,13 +77,13 @@ const TaskListComponent = () => {
 							</thead>
 							<tbody>
 								{ lstTask.map((task, index) => {
-									return (<TaskComponent key={ index } task={ task }></TaskComponent>)
+									return (<TaskComponent key={ index } task={ task } complete={ completeTask } remove={ removeTask } ></TaskComponent>);
 								}) }
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<TaskForm></TaskForm>
+				<TaskForm add={ addTask }></TaskForm>
 			</div>
 		</div>
 	);

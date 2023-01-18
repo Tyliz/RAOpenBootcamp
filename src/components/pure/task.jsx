@@ -6,7 +6,7 @@ import '../../styles/task.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { LEVELS } from '../../models/levels.enum';
 
-const TaskComponent = ({ task }) => {
+const TaskComponent = ({ task, complete, remove }) => {
 	useEffect(() => {
 		console.log('Created Task');
 		return () => {
@@ -42,9 +42,9 @@ const TaskComponent = ({ task }) => {
 		let icon = null;
 
 		if (task.completed) {
-			icon = (<FontAwesomeIcon icon='fa-regular fa-square-check' className='icono-completado'/>);
+			icon = (<FontAwesomeIcon icon='fa-regular fa-square-check' onClick={ () => complete(task) } className='icono-completado'/>);
 		} else {
-			icon = (<FontAwesomeIcon icon='fa-regular fa-square' className='icono-pendiente'/>);
+			icon = (<FontAwesomeIcon icon='fa-regular fa-square' onClick={ () => complete(task)  } className='icono-pendiente'/>);
 		}
 
 		return icon;
@@ -63,14 +63,16 @@ const TaskComponent = ({ task }) => {
 			</td>
 			<td className='aling-middle'>
 				{ taskCompletedIcon() }
-				<FontAwesomeIcon icon="fa-solid fa-trash" className='icono-eliminar' />
+				<FontAwesomeIcon icon="fa-solid fa-trash" onClick={ () => remove(task) } className='icono-eliminar' />
 			</td>
 		</tr>
 	);
 };
 
 TaskComponent.propTypes = {
-	task: PropTypes.instanceOf(Task)
+	task: PropTypes.instanceOf(Task).isRequired,
+	complete: PropTypes.func.isRequired,
+	remove: PropTypes.func.isRequired,
 };
 
 export default TaskComponent;

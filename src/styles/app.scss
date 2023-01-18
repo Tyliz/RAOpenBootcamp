@@ -1,7 +1,17 @@
 :root {
-    --primary-color: #2e0045;
+	--primary-bg-color: #fff;
+	--primary-color: #2e0045;
 }
 
 h1 {
-    color: #ff0080;
+	color: var(--primary-color);
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: var(--primary-bg-color);
 }
