@@ -1,5 +1,31 @@
 .task__name {
-    font-weight: bold;
-    // color: #5f9ea0;
-    color: var(--primary-color);
+	font-weight: bold;
+	// color: #5f9ea0;
+	color: var(--primary-color);
+}
+
+.tasklist__body {
+	position: relative;
+	height: 400px;
+}
+
+.icono-completado {
+	cursor: pointer;
+	color: green;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.icono-pendiente {
+	cursor: pointer;
+	color: gray;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.icono-eliminar {
+	cursor: pointer;
+	color: tomato;
+	font-weight: bold;
+	font-size: 1.5rem;
 }

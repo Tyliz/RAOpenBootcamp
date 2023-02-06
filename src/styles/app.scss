@@ -1,3 +1,15 @@
 :root {
-    --primary-color: #2e0045;
+	--primary-bg-color: #fff;
+	--primary-color: #2e0045;
+}
+
+h1 {
+	color: var(--primary-color);
+}
+
+body {
+	align-items: center;
+	justify-content: center;
+	padding: 40px;
+	background-color: var(--primary-bg-color);
 }

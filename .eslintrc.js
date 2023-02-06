@@ -1,4 +1,6 @@
-module.export = {
+/*eslint no-undef: "error"*/
+/*eslint-env node*/
+module.exports = {
 	'env': {
 		'browser': true,
 		'es2021': true
@@ -18,9 +20,11 @@ module.export = {
 		'react'
 	],
 	'rules': {
+		'import/prefer-default-export': 0,
 		'indent': [
 			'error',
-			'tab'
+			'tab',
+			{ 'SwitchCase': 1 }
 		],
 		'linebreak-style': [
 			'error',
