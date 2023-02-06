@@ -54,6 +54,26 @@ const TaskListComponent = () => {
 		setLstTask(tmpLstTask);
 	};
 
+	const taskTable = () => {
+		return (
+			<table>
+				<thead>
+					<tr>
+						<th scope='col'>Title</th>
+						<th scope='col'>Description</th>
+						<th scope='col'>Priority</th>
+						<th scope='col'>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					{ lstTask.map((task, index) => {
+						return (<TaskComponent key={ index } task={ task } complete={ completeTask } remove={ removeTask } ></TaskComponent>);
+					}) }
+				</tbody>
+			</table>
+		);
+	};
+
 	return (
 		<div>
 			<div className='col-12'>
@@ -66,21 +86,7 @@ const TaskListComponent = () => {
 					</div>
 
 					<div className='card-body tasklist__body' data-mdb-perfect-scrollbar='true' >
-						<table>
-							<thead>
-								<tr>
-									<th scope='col'>Title</th>
-									<th scope='col'>Description</th>
-									<th scope='col'>Priority</th>
-									<th scope='col'>Actions</th>
-								</tr>
-							</thead>
-							<tbody>
-								{ lstTask.map((task, index) => {
-									return (<TaskComponent key={ index } task={ task } complete={ completeTask } remove={ removeTask } ></TaskComponent>);
-								}) }
-							</tbody>
-						</table>
+
 					</div>
 				</div>
 				<TaskForm add={ addTask }></TaskForm>
