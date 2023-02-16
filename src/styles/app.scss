@@ -13,3 +13,35 @@ body {
 	padding: 40px;
 	background-color: var(--primary-bg-color);
 }
+
+.empty-message {
+	display: grid;
+	place-items: center;
+}
+
+.empty-message__icon {
+	color: var(--primary-color);
+	font-size: 5rem;
+}
+
+.empty-message__text {
+	color: var(--primary-color);
+}
+
+fieldset.fieldset {
+	border: .25rem solid var(--primary-color);
+	border-radius: 0.5rem;
+	padding: 1rem;
+}
+
+.fieldset__legend {
+	float: none;
+	display: initial;
+	width: auto;
+}
+
+.row {
+	margin: 0;
+	gap: .25rem;
+	margin-bottom:  .5rem;
+}
