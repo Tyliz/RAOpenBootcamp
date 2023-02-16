@@ -7,7 +7,8 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 
-import OptionRender from './components/pure/optionRender';
+// import OptionRender from './components/pure/optionRender';
+import TaskListComponent from './components/container/task_list';
 
 config.autoAddCss = false;
 library.add(fas, far);
@@ -20,12 +21,12 @@ function App() {
 			{/* Rendering custom component "Greeting" */}
 			{/* <Greeting name="Tyliz"></Greeting> */}
 			{/* <Greetingf name="Tyliz"></Greetingf> */}
-			{/* <TaskListComponent></TaskListComponent> */}
+			<TaskListComponent></TaskListComponent>
 			{/* <Example2></Example2> */}
 			{/* <MiComponenteConContexto></MiComponenteConContexto> */}
 			{/* <UsuarioComponent></UsuarioComponent> */}
 			{/* </header> */}
-			<OptionRender></OptionRender>
+			{/* <OptionRender></OptionRender> */}
 		</div>
 	);
 }

@@ -4,6 +4,18 @@
 	color: var(--primary-color);
 }
 
+.task-completed,
+.task-completed .task__name {
+	color: green;
+	text-decoration: line-through;
+}
+
+.task-pending,
+.task-pending .task__name  {
+	font-weight: bold;
+	color: tomato;
+}
+
 .tasklist__body {
 	position: relative;
 	height: 400px;
@@ -28,4 +40,19 @@
 	color: tomato;
 	font-weight: bold;
 	font-size: 1.5rem;
+}
+
+.normal {
+	color: blue;
+	font-weight: bold;
+}
+
+.urgent {
+	color: #9c9c3a;
+	font-weight: bold;
+}
+
+.blocking {
+	color: tomato;
+	font-weight: bold;
 }

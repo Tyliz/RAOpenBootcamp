@@ -42,16 +42,16 @@ const TaskComponent = ({ task, complete, remove }) => {
 		let icon = null;
 
 		if (task.completed) {
-			icon = (<FontAwesomeIcon icon='fa-regular fa-square-check' onClick={ () => complete(task) } className='icono-completado'/>);
+			icon = (<FontAwesomeIcon icon='fa-solid fa-toggle-on' onClick={ () => complete(task) } className='icono-completado'/>);
 		} else {
-			icon = (<FontAwesomeIcon icon='fa-regular fa-square' onClick={ () => complete(task)  } className='icono-pendiente'/>);
+			icon = (<FontAwesomeIcon icon='fa-solid fa-toggle-off' onClick={ () => complete(task)  } className='icono-pendiente'/>);
 		}
 
 		return icon;
 	}
 
 	return (
-		<tr className='fw-normal task'>
+		<tr className={ 'fw-normal task ' + (task.completed ? 'task-completed': 'task-pending') }>
 			<th>
 				<span className='ms-2 task__name'>{ task.name }</span>
 			</th>
