@@ -1,21 +1,21 @@
-import React, { useRef } from 'react';
-import PropTypes from 'prop-types';
+import React, { useRef } from 'react'
+import PropTypes from 'prop-types'
 
 const Child = ({ name, send, update }) => {
-	const messageRef = useRef('');
-	const nameRef = useRef('');
+	const messageRef = useRef('')
+	const nameRef = useRef('')
 
 	function pressButton() {
-		alert('Default text');
+		alert('Default text')
 	}
 
 	function pressButtonParams(text) {
-		alert(`Text: ${text}`);
+		alert(`Text: ${text}`)
 	}
 
 	function submitName(e) {
-		e.preventDefault();
-		update(nameRef.current.value);
+		e.preventDefault()
+		update(nameRef.current.value)
 	}
 
 	return (
@@ -54,14 +54,14 @@ const Child = ({ name, send, update }) => {
 				</form>
 			</div>
 		</div>
-	);
-};
+	)
+}
 
 
 Child.propTypes = {
 	name: PropTypes.string,
 	send: PropTypes.func,
 	update: PropTypes.func,
-};
+}
 
-export default Child;
+export default Child

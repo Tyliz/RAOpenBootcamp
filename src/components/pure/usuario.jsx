@@ -1,31 +1,31 @@
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import axios from 'axios'
+import React, { useState, useEffect } from 'react'
 
 export const UsuarioComponent = () => {
 
-	const [puntos, setPuntos] = useState(0);
+	const [puntos, setPuntos] = useState(0)
 
 	useEffect(() => {
-		obtenerUsuario();
-	}, [puntos]);
+		obtenerUsuario()
+	}, [puntos])
 
 
 	const obtenerUsuario = () => {
 		return axios.get('https://randomuser.me/api').then((response) => {
 			if (response.status === 200) {
-				console.table(response.data);
-				alert(JSON.stringify(response.data));
+				console.table(response.data)
+				alert(JSON.stringify(response.data))
 			} else {
-				throw new Error('No se pudo obtener el usuario');
+				throw new Error('No se pudo obtener el usuario')
 			}
 		}).catch((error) => {
-			console.error(`[Error]: ${error}`);
-		});
-	};
+			console.error(`[Error]: ${error}`)
+		})
+	}
 
 	const sumarPuntos = () => {
-		setPuntos(puntos + 1);
-	};
+		setPuntos(puntos + 1)
+	}
 
 	return (
 		<div>
@@ -35,5 +35,5 @@ export const UsuarioComponent = () => {
 				Sumar Puntos
 			</button>
 		</div>
-	);
-};
+	)
+}
