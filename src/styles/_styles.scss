@@ -1,0 +1,55 @@
+@use 'root';
+
+h1 {
+	color: root.$primary-color;
+}
+
+body {
+	align-items: center;
+	justify-content: center;
+	padding: 40px;
+	background-color: root.$primary-bg-color;
+}
+
+.empty-message {
+	display: grid;
+	place-items: center;
+}
+
+.empty-message__icon {
+	color: root.$primary-color;
+	font-size: 5rem;
+}
+
+.empty-message__text {
+	color: root.$primary-color;
+}
+
+fieldset.fieldset {
+	border: .25rem solid root.$primary-color;
+	border-radius: 0.5rem;
+	padding: 1rem;
+}
+
+.fieldset__legend {
+	float: none;
+	display: initial;
+	width: auto;
+}
+
+.row {
+	margin: 0;
+	gap: .25rem;
+	margin-bottom:  .5rem;
+}
+
+.error-message {
+	font-size: 0.9rem;
+	font-weight: bold;
+	margin: 0;
+	color: #4b0000;
+	// background: #ff7782;
+	padding: 0;
+	// border: 0.05rem solid #ff7782;
+	border-radius: 0.25rem;
+}

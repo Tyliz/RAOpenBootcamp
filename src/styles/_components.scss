@@ -1,0 +1,34 @@
+@use 'root';
+
+.loading {
+	padding: 1rem;
+}
+
+.form-field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.form-field__label {
+	color: #005c56;
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+.form-field__input {
+	padding: 0.25rem 0.75rem;
+	outline: none;
+	border: 0.1rem solid #005c56;
+	border-radius: 0.25rem;
+
+	&:hover {
+		outline: none;
+		box-shadow: 0 0 1rem #005c56;
+	}
+
+	&::placeholder {
+		color: #005c56a1;
+	}
+}

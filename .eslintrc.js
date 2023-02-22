@@ -36,7 +36,12 @@ module.exports = {
 		],
 		'semi': [
 			'error',
-			'always'
+			'never'
+		],
+		'react/prop-types': [1],
+		'no-unused-vars': [
+			'warn',
+			'all'
 		]
 	}
-};
+}
