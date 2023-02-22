@@ -9,16 +9,16 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
 export default class LifeCycleExample extends Component {
-  static propTypes = {second: third}
+	static propTypes = { second: third }
 
-  constructor(props) {
-    super(props);
-    console.log('CONSTRUCTOR: Cuando se instancia el componente');
-  }
+	constructor(props) {
+		super(props);
+		console.log('CONSTRUCTOR: Cuando se instancia el componente');
+	}
 
-  render() {
-    return (
-      <div>LifeCycleExample</div>
-    )
-  }
+	render() {
+		return (
+			<div>LifeCycleExample</div>
+		)
+	}
 }
