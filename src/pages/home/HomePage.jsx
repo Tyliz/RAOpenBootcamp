@@ -1,7 +1,15 @@
-import React from 'react'
+import React, {
+	useEffect,
+	useState,
+} from 'react'
 import { useNavigate  } from 'react-router-dom'
 
 const HomePage = () => {
+	const [logged, setLogged] = useState(false)
+
+	useEffect(() => {
+		setLogged(localStorage.getItem('credential')? true : false)
+	}, [])
 	const navigate = useNavigate()
 
 	const goProfile = () => {
@@ -16,18 +24,26 @@ const HomePage = () => {
 		navigate(+1)
 	}
 
+	const logout = () => {
+		localStorage.removeItem('credential')
+		navigate('/Login', { replace: true })
+	}
+
 	return (
 		<div>
 			<h1>Home Page</h1>
-			<button onClick={ goProfile }>
+			{ logged ? (<button onClick={ goProfile }>
 				Go to Profile
-			</button>
+			</button>) : null}
 			<button onClick={ goBack }>
 				Go Back
 			</button>
 			<button onClick={ goForward }>
 				Go Forward
 			</button>
+			{ logged ? (<button onClick={ logout }>
+				Logout
+			</button>) : null}
 		</div>
 	)
 }
