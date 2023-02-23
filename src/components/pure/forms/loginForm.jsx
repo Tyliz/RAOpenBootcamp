@@ -1,9 +1,3 @@
-/**
- * Componente que va a contener un formulario para la
- * autenticación de usuarios
- * rfc
- */
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
 	ErrorMessage,
@@ -11,20 +5,12 @@ import {
 	Form,
 	Formik,
 } from 'formik'
-import React, {
-	useEffect,
-	useState,
-} from 'react'
+import React from 'react'
 import * as Yup from 'yup'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 const LoginForm = () => {
-	const [logged, setLogged] = useState(false)
-
-	useEffect(() => {
-		setLogged(localStorage.getItem('credential')? true : false)
-	}, [])
 
 	const navigate = useNavigate()
 
@@ -50,7 +36,7 @@ const LoginForm = () => {
 		navigate('/', { replace: true })
 	}
 
-	return !logged ? (
+	return (
 		<div className='border border-1 border-primary rounded-3 p-3 col-md-6 offset-md-3'>
 			<h4>Login Formik</h4>
 			<hr />
@@ -98,8 +84,7 @@ const LoginForm = () => {
 				}
 			</Formik>
 		</div>
-	):
-		(<Navigate to='/' replace />)
+	)
 }
 
 export default LoginForm
