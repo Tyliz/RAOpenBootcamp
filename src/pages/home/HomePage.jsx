@@ -5,15 +5,15 @@ import React, {
 import { useNavigate  } from 'react-router-dom'
 
 const HomePage = () => {
-	const [logged, setLogged] = useState(false)
+	const [credential, setCredential] = useState(undefined)
 
 	useEffect(() => {
-		setLogged(localStorage.getItem('credential')? true : false)
+		setCredential(localStorage.getItem('credential'))
 	}, [])
 	const navigate = useNavigate()
 
 	const goProfile = () => {
-		navigate('/profile')
+		navigate('/Profile')
 	}
 
 	const goBack = () => {
@@ -32,18 +32,20 @@ const HomePage = () => {
 	return (
 		<div>
 			<h1>Home Page</h1>
-			{ logged ? (<button onClick={ goProfile }>
-				Go to Profile
-			</button>) : null}
-			<button onClick={ goBack }>
-				Go Back
-			</button>
-			<button onClick={ goForward }>
-				Go Forward
-			</button>
-			{ logged ? (<button onClick={ logout }>
-				Logout
-			</button>) : null}
+			<div className='d-flex gap-3'>
+				{ credential ? (<button className='btn btn-primary' onClick={ goProfile }>
+					Go to Profile
+				</button>) : null}
+				<button className='btn btn-primary' onClick={ goBack }>
+					Go Back
+				</button>
+				<button className='btn btn-primary' onClick={ goForward }>
+					Go Forward
+				</button>
+				{ credential ? (<button className='btn btn-primary' onClick={ logout }>
+					Logout
+				</button>) : null}
+			</div>
 		</div>
 	)
 }

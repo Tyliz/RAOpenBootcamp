@@ -33,7 +33,12 @@ const LoginForm = () => {
 			setTimeout(response, 1000)
 		})
 		localStorage.setItem('credential', JSON.stringify(values, null, 2))
-		navigate('/', { replace: true })
+		window.location.reload()
+	}
+
+	const goSingin = (e) => {
+		e.preventDefault()
+		navigate('/Singin', { replace:true })
 	}
 
 	return (
@@ -71,6 +76,12 @@ const LoginForm = () => {
 									</button>
 									<button type='submit' className='btn btn-success m-1'>
 										Login <FontAwesomeIcon icon='fa-solid fa-key' />
+									</button>
+								</div>
+								<hr className='hr-or'/>
+								<div className='d-flex flex-column mt-3'>
+									<button className='btn btn-primary' type='button' onClick={ goSingin } >
+										Singin
 									</button>
 								</div>
 								{ isSubmitting ? (

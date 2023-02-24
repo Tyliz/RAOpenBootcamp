@@ -4,10 +4,15 @@ import { ROLES } from '../../../models/roles.enum'
 import { User } from '../../../models/user.class'
 import * as Yup from 'yup'
 
+import {
+	useNavigate,
+} from 'react-router-dom'
+
 
 const RegisterForm = () => {
-
 	let user = new User()
+
+	const navigator = useNavigate()
 
 	const submit = async (values) => {
 		await new Promise((response) => {
@@ -138,9 +143,15 @@ const RegisterForm = () => {
 										)
 									}
 								</div>
-								<div>
-									<button className='btn btn-primary'>
-										Sing In
+								<div className='d-flex flex-column mt-3'>
+									<button type='submit' className='btn btn-success'>
+										Singin
+									</button>
+								</div>
+								<hr className='hr-or' />
+								<div className='d-flex flex-column mt-3'>
+									<button type='button' className='btn btn-primary' onClick={ () => navigator('/Login') }>
+										Login
 									</button>
 								</div>
 								{ isSubmitting ? (<div className='loading'>Submitting...</div>) : null }
