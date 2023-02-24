@@ -7,7 +7,7 @@ h1 {
 body {
 	align-items: center;
 	justify-content: center;
-	padding: 0 2rem;
+	// padding: 0 2rem;
 	background-color: root.$primary-bg-color;
 }
 
@@ -52,4 +52,44 @@ fieldset.fieldset {
 	padding: 0;
 	// border: 0.05rem solid #ff7782;
 	border-radius: 0.25rem;
+}
+
+.menu-header {
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+	padding: 1rem 2rem;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	background: #015684;
+}
+
+.header-link {
+	color: #fff;
+	text-decoration: none;
+
+	&:hover {
+		color: #fff;
+		cursor: pointer;
+		border-bottom: 2px solid #fff;
+	}
+}
+
+.App-content {
+	padding: 2rem;
+}
+
+.hr-or {
+	display: flex;
+	overflow: visible;
+	justify-content: center;
+
+	&:after {
+		content: 'Or';
+		padding: 0 .25rem;
+		color: #000;
+		background: #fff;
+		transform: translateY(-50%);
+	}
 }
