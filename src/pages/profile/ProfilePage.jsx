@@ -1,21 +1,21 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 
-import { User } from '../../models/user.class'
+// import { User } from '../../models/user.class'
 
 
-const ProfilePage = ({ user }) => {
+const ProfilePage = () => {
 	return (
 		<div>
 			<h1>Your Profile</h1>
-			<p>{ user.username }</p>
+			{/* <p>{ user.username }</p> */}
 		</div>
 	)
 }
 
-ProfilePage.propTypes = {
-	user: PropTypes.instanceOf(User).isRequired,
-}
+// ProfilePage.propTypes = {
+// 	user: PropTypes.instanceOf(User).isRequired,
+// }
 
 export default ProfilePage
