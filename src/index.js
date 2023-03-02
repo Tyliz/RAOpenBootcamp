@@ -5,16 +5,16 @@ import 'bootstrap/dist/css/bootstrap.css'
 // ! Importante: los estilos propios, deben ir despues de los estilos de bootstrap
 import './index.css'
 import './styles/app.scss'
-// import App from './App'
+import App from './App'
 // import AppRoutingFinal from './AppRoutingFinal'
-import AppRoutingOne from './AppRoutingOne'
+// import AppRoutingOne from './AppRoutingOne'
 import reportWebVitals from './reportWebVitals'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
 	<React.StrictMode>
-		<AppRoutingOne />
+		<App />
 	</React.StrictMode>
 )
 

@@ -6,9 +6,10 @@ import { config, library } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
+import ObservableExample from './components/pure/observableExample'
 
 // import OptionRender from './components/pure/optionRender'
-import TaskListComponent from './components/container/task_list'
+// import TaskListComponent from './components/container/task_list'
 // import RegisterForm from './components/pure/forms/registerForm'
 
 config.autoAddCss = false
@@ -22,7 +23,8 @@ function App() {
 			{/* Rendering custom component "Greeting" */}
 			{/* <Greeting name="Tyliz"></Greeting> */}
 			{/* <Greetingf name="Tyliz"></Greetingf> */}
-			<TaskListComponent></TaskListComponent>
+			{/* <AsyncExample /> */}
+			<ObservableExample />
 			{/* <RegisterForm></RegisterForm> */}
 			{/* <Example2></Example2> */}
 			{/* <MiComponenteConContexto></MiComponenteConContexto> */}
