@@ -16,6 +16,30 @@
 	font-size: 2rem;
 }
 
+.btn {
+	color: #000;
+	background: #ffffff;
+	border: 0.15rem solid #cacaca;
+	text-decoration: none;
+	outline: none;
+
+	&:focus {
+		outline: none;
+		color: #000;
+		background: #ffffff;
+		border: 0.15rem solid #cacaca;
+		text-decoration: none;
+		outline: none;
+	}
+
+	&:hover {
+		cursor: pointer;
+		background: #dadada;
+		color: #000;
+		border-color: #000;
+	}
+}
+
 .form-field {
 	display: flex;
 	flex-direction: column;
@@ -43,4 +67,79 @@
 	&::placeholder {
 		color: #005c56a1;
 	}
+}
+
+.paginator {
+	display: grid;
+	width: 95%;
+	gap: 0.15rem;
+	grid-auto-columns: minmax(2rem, max-content);
+	grid-auto-flow: column;
+	place-content: center;
+}
+
+.btn-page {
+	color: root.$primary-color;
+	text-decoration: none;
+	border: 0.15rem solid root.$primary-color;
+	border-radius: 0.25rem;
+	padding: 0.25rem;
+	text-align: center;
+
+	&.actual {
+		cursor: default;
+		background-color: root.$primary-color;
+		color: root.$primary-bg-color;
+	}
+
+	&:hover {
+		text-decoration: none;
+		background-color: root.$primary-color;
+		color: root.$primary-bg-color;
+	}
+}
+
+.list-cards {
+	display: flex;
+	flex-flow: row wrap;
+	flex-wrap: wrap;
+	width: 95%;
+	gap: 0.25rem;
+	align-content: space-between;
+	justify-content: center;
+	margin: auto;
+}
+
+.card-user {
+	min-width: calc(50% - 0.5rem);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	border: 0.15rem solid var(--primary-color);
+	border-radius: 0.25rem;
+	padding: 0.25rem 0.4rem;
+	justify-content: inherit;
+	align-items: center;
+}
+
+.card-user__avatar {
+	padding: 0.2rem;
+	border-radius: 0.25rem;
+	border: 0.15rem solid root.$primary-color;
+	align-self: center;
+
+	img {
+		width: 100%;
+		min-height: 5rem;
+		height: auto;
+		object-fit: cover;
+	}
+}
+
+.card-user__data {
+	display: grid;
+	justify-content: left;
+	align-self: center;
+	align-items: center;
+	padding: 0.25rem;
 }
