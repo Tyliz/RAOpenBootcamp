@@ -22,3 +22,22 @@ export const getUser = async (idUser) => {
 	// We return the json
 	return response.json()
 }
+
+export const login = async (email, password) => {
+	let body = {
+		email,
+		password,
+	}
+	let response = await fetch('https://reqres.in/api/login', {
+		method: 'POST',
+		mode: 'no-cors',
+		credentials: 'omit',
+		cache: 'no-cache',
+		headers: {
+			'content-type': 'aplication/json',
+		},
+		body
+	})
+	// We return the json
+	return response.json()
+}
