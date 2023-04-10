@@ -19,6 +19,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import NotFoundPage from '../pages/404/NotFoundPage'
 import FetchExample from '../components/pure/FetchExample'
 import FetchUser from '../components/pure/FetchUser'
+import AxiosExample from '../components/pure/AxiosExample'
 
 
 function LayoutFetch() {
@@ -27,6 +28,7 @@ function LayoutFetch() {
 		<BrowserRouter>
 			<Routes>
 				<Route path='/' element={ <FetchExample /> } />
+				<Route path='/axios' element={ <AxiosExample /> } />
 				<Route path='/User/:idUser' element={ <FetchUser /> } />
 				<Route path='*' element={ <NotFoundPage /> } />
 			</Routes>
