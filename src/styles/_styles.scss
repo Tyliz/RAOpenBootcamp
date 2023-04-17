@@ -101,3 +101,26 @@ fieldset.fieldset {
 .app-layout {
 	padding: 1rem;
 }
+
+.content {
+	padding: 1.5rem;
+}
+
+.list-jokes {
+	display: grid;
+	border: 0.15rem solid #009f83;
+	border-radius: 0.5rem;
+	margin: 1rem;
+}
+
+.joke {
+	display: grid;
+	grid-template-columns: 1fr 2.5rem 2.5rem;
+	align-items: center;
+	padding: 0.5rem;
+	border-bottom: 0.15rem solid #009f83;
+}
+
+.joke:last-child {
+	border: none;
+}
