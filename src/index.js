@@ -9,13 +9,13 @@ import './styles/app.scss'
 // import AppRoutingFinal from './AppRoutingFinal'
 // import AppRoutingOne from './AppRoutingOne'
 import reportWebVitals from './reportWebVitals'
-import LayoutFetch from './layout/LayoutFetch'
+import LayoutChuck from './layout/LayoutChuck'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
 	<React.StrictMode>
-		<LayoutFetch />
+		<LayoutChuck />
 	</React.StrictMode>
 )
 
