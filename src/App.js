@@ -6,7 +6,7 @@ import { config, library } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
-import FetchExample from './components/pure/FetchExample'
+import LayoutChuck from './layout/LayoutChuck'
 
 // import OptionRender from './components/pure/optionRender'
 // import TaskListComponent from './components/container/task_list'
@@ -24,7 +24,7 @@ function App() {
 			{/* <Greeting name="Tyliz"></Greeting> */}
 			{/* <Greetingf name="Tyliz"></Greetingf> */}
 			{/* <AsyncExample /> */}
-			<FetchExample />
+			<LayoutChuck />
 			{/* <RegisterForm></RegisterForm> */}
 			{/* <Example2></Example2> */}
 			{/* <MiComponenteConContexto></MiComponenteConContexto> */}
