@@ -26,8 +26,8 @@ const AxiosExample = () => {
 
 
 	return (
-		<div>
-			<h1>Axios Example</h1>
+		<div className='center-layoud'>
+			<h1 className='title'>Axios Example</h1>
 			{ user !== undefined ?
 				(
 					<div>
@@ -38,13 +38,15 @@ const AxiosExample = () => {
 				) :
 				(
 					<div>
-						<p>Generate a new User</p>
-						<button onClick={ obtainUser }>
-							Random User
-						</button>
 					</div>
 				)
 			}
+			<div>
+				<p>Generate a new User</p>
+				<button onClick={ obtainUser }>
+					Random User
+				</button>
+			</div>
 		</div>
 	)
 }
