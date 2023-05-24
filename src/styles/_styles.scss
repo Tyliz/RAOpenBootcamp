@@ -124,3 +124,21 @@ fieldset.fieldset {
 .joke:last-child {
 	border: none;
 }
+
+.center-layoud {
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+
+.padding-layoud {
+	padding: 2.5rem;
+}
+
+
+.loginContent {
+	width: 90%;
+	padding: 2.5rem;
+	border: #052c66 solid 1px;
+	border-radius: .5rem;
+}
